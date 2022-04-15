@@ -1,0 +1,43 @@
+table {
+    width: 100%;
+}
+
+mat-form-field {
+    width: 70%;
+}
+
+.appointment-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60%;
+    min-width: 600px;
+    margin-left: 10px;
+}
+
+.callendar {
+    margin-top: 55px;
+    width: 30%;
+    min-width: 350px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    min-width: fit-content;
+    justify-content: space-around;
+    padding-top: 90px;
+    z-index: 1;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.counter {
+    padding-top: 25px;
+}

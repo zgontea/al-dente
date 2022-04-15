@@ -1,0 +1,16 @@
+.logo {
+    height: 55px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+mat-toolbar {
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    margin-left: 20px;
+}
