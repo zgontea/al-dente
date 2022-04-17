@@ -1,0 +1,50 @@
+<div class="navbar">
+    <app-navbar></app-navbar>
+</div>
+
+<div class="container">
+    <div class="patients-table">
+        <mat-form-field>
+            <input matInput placeholder="Search" name="search" icon />
+        </mat-form-field>
+        <button mat-button color="primary" (click)="openDialog()">Add Patient</button>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let element">{{ element.name}}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="gender">
+                <th mat-header-cell *matHeaderCellDef>Gender</th>
+                <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+            </ng-container>
+            
+            <ng-container matColumnDef="age">
+                <th mat-header-cell *matHeaderCellDef>Age</th>
+                <td mat-cell *matCellDef="let element">{{ element.age }}</td>
+            </ng-container>
+            
+            <ng-container matColumnDef="city">
+                <th mat-header-cell *matHeaderCellDef>City</th>
+                <td mat-cell *matCellDef="let element">{{ element.city }}</td>
+            </ng-container>
+            
+            <ng-container matColumnDef="zip_code">
+                <th mat-header-cell *matHeaderCellDef>Zip code</th>
+                <td mat-cell *matCellDef="let element">{{ element.zip_code }}</td>
+            </ng-container>
+            
+            <ng-container matColumnDef="telephone">
+                <th mat-header-cell *matHeaderCellDef>Telephone</th>
+                <td mat-cell *matCellDef="let element">{{ element.telephone }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let orw; columns: displayedColumns"></tr>
+        </table>
+    </div>
+</div>
+
+
+

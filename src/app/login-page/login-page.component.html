@@ -1,8 +1,7 @@
 <mat-card>
   <mat-card-content>
-    <img class="logo" src="{{imageSrc}}"/>
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
-      <h1 class="header">Log In</h1>
+    <img class="logo" src="{{ imageSrc }}" />
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">  
       <mat-error *ngIf="!loginValid">
         The username and password were not recognized
       </mat-error>
@@ -27,14 +26,21 @@
         />
         <mat-error> Please provide a valid password </mat-error>
       </mat-form-field>
-      <button class="button" mat-raised-button color="accent">Login</button>
+      <button
+        class="button"
+        mat-raised-button
+        color="primary"
+        routerLink="/dashboard"
+      >
+        Login
+      </button>
     </form>
     <button
       class="button"
       routerLink="/register"
       routerLinkActive="active"
       mat-stroked-button
-      color="accent"
+      color="primary"
     >
       Create Account
     </button>

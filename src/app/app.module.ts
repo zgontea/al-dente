@@ -10,6 +10,9 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatTableModule } from '@angular/material/table';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,13 +22,21 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PatientsPageComponent } from './patients-page/patients-page.component';
+import { AppointmentCallendarComponent } from './appointment-callendar/appointment-callendar.component';
+import { NewAppoinmentModalComponent } from './new-appoinment-modal/new-appoinment-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    PageNotFoundComponent,
+    PatientsPageComponent,
+    AppointmentCallendarComponent,
+    NewAppoinmentModalComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +52,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatTableModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatDividerModule,
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [
     MatDatepickerModule

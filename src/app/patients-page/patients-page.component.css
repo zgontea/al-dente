@@ -3,22 +3,16 @@ table {
 }
 
 mat-form-field {
-    width: 100%;
+    width: 70%;
 }
 
-.appointment-table {
-    display: block;
-    width: 75%;
+.patients-table {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 60%;
     min-width: 600px;
     margin-left: 10px;
-}
-
-.callendar {
-    margin-top: 55px;
-    width: 20%;
-    min-width: 350px;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 
 .container {
@@ -34,8 +28,4 @@ mat-form-field {
     position: fixed;
     width: 100%;
     z-index: 2;
-}
-
-.counter {
-    padding-top: 25px;
 }

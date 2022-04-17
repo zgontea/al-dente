@@ -10,7 +10,7 @@ export class LoginPageComponent implements OnInit {
   public username = '';
   public password = '';
 
-  imageSrc = '../assets/logo.png';
+  imageSrc = '../assets/logo-removebg.png';
   
   constructor() { }
 
