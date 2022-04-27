@@ -27,6 +27,8 @@ import { PatientsPageComponent } from './patients-page/patients-page.component';
 import { AppointmentCallendarComponent } from './appointment-callendar/appointment-callendar.component';
 import { NewAppoinmentModalComponent } from './new-appoinment-modal/new-appoinment-modal.component';
 
+import { JwtModule } from '@auth0/angular-jwt';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,7 @@ import { NewAppoinmentModalComponent } from './new-appoinment-modal/new-appoinme
     PageNotFoundComponent,
     PatientsPageComponent,
     AppointmentCallendarComponent,
-    NewAppoinmentModalComponent
+    NewAppoinmentModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,11 +57,17 @@ import { NewAppoinmentModalComponent } from './new-appoinment-modal/new-appoinme
     MatProgressBarModule,
     MatDividerModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: function tokenGetter() {
+          return localStorage.getItem('access_token');
+        },
+      },
+    }),
   ],
-  providers: [
-    MatDatepickerModule
-  ],
-  bootstrap: [AppComponent]
+  providers: [MatDatepickerModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
